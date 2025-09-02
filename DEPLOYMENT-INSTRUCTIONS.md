@@ -152,3 +152,4 @@ server {
 
 ---
 **🎯 Votre site Palais Florentin est prêt pour la production !**
+

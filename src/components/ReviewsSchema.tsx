@@ -67,3 +67,4 @@ const ReviewsSchema = () => {
 };
 
 export default ReviewsSchema;
+

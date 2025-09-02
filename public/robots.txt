@@ -7,38 +7,75 @@ Sitemap: https://palais-florentin.com/sitemap.xml
 # Crawl-delay pour éviter de surcharger le serveur
 Crawl-delay: 1
 
-# Permettre l'indexation des images
+# Permettre l'accès aux ressources importantes
 Allow: /lovable-uploads/
+Allow: /src/
 Allow: /public/
 
-# Bloquer les fichiers techniques
-Disallow: /src/
+# Bloquer l'accès aux fichiers sensibles
+Disallow: /supabase/
 Disallow: /node_modules/
 Disallow: /.env
 Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /bun.lockb
 Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /tailwind.config.ts
+Disallow: /postcss.config.js
+Disallow: /eslint.config.js
 
-# Permettre l'indexation des pages importantes
-Allow: /appartement
-Allow: /emplacement
-Allow: /reserver
-Allow: /services
-Allow: /contact
+# Bloquer l'accès aux fichiers de développement
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /dist/
+Disallow: /build/
 
-# Bloquer les pages admin
-Disallow: /admin
-Disallow: /admin-test
-
-# Permettre l'indexation des ressources statiques
-Allow: /*.css
-Allow: /*.js
+# Permettre l'accès aux images et médias
 Allow: /*.png
 Allow: /*.jpg
 Allow: /*.jpeg
 Allow: /*.gif
 Allow: /*.svg
 Allow: /*.ico
-Allow: /*.woff
-Allow: /*.woff2
-Allow: /*.ttf
-Allow: /*.eot
+Allow: /*.webp
+
+# Permettre l'accès aux fichiers CSS et JS
+Allow: /*.css
+Allow: /*.js
+
+# Instructions spécifiques pour Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Instructions spécifiques pour les bots de réseaux sociaux
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Bloquer les bots malveillants connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /

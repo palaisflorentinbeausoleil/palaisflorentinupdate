@@ -64,3 +64,4 @@ const LodgifyTest = () => {
 };
 
 export default LodgifyTest;
+
