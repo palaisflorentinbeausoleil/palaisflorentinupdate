@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://palais-florentin.com/sitemap.xml
+
+# Crawl-delay pour éviter de surcharger le serveur
+Crawl-delay: 1
+
+# Permettre l'indexation des images
+Allow: /lovable-uploads/
+Allow: /public/
+
+# Bloquer les fichiers techniques
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /tsconfig.json
+
+# Permettre l'indexation des pages importantes
+Allow: /appartement
+Allow: /emplacement
+Allow: /reserver
+Allow: /services
+Allow: /contact
+
+# Bloquer les pages admin
+Disallow: /admin
+Disallow: /admin-test
+
+# Permettre l'indexation des ressources statiques
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot

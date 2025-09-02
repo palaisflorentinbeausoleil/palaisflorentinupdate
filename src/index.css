@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palais Florentin - Riviera Luxe Design System 
+All colors in HSL format for the luxury Mediterranean aesthetic
+*/
+
+@layer base {
+  :root {
+    /* Riviera Luxe Palette - Couleurs exactes du site en production */
+    --pearl-white: 40 25% 96%;        /* #F8F6F2 - Main background */
+    --sand-beige: 32 30% 80%;         /* #DCCBB6 - Sections */
+    --deep-navy: 210 35% 17%;         /* #1E2A3A - Titles, primary buttons */
+    --champagne-gold: 40 45% 57%;     /* #C9A35A - Luxury accents */
+    --azure-blue: 195 50% 53%;        /* #4DA3C5 - Fresh accents */
+    --stone-grey: 0 0% 55%;           /* #8B8B8B - Secondary text */
+    
+    /* Main theme colors mapped to design system */
+    --background: 40 25% 96%;
+    --foreground: 210 35% 17%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 210 35% 17%;
+
+    --popover: 40 25% 96%;
+    --popover-foreground: 210 35% 17%;
+
+    --primary: 210 35% 17%;
+    --primary-foreground: 40 25% 96%;
+
+    --secondary: 32 30% 80%;
+    --secondary-foreground: 210 35% 17%;
+
+    --muted: 32 30% 80%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 40 45% 57%;
+    --accent-foreground: 210 35% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 25% 96%;
+
+    --border: 32 25% 88%;
+    --input: 32 25% 88%;
+    --ring: 40 45% 57%;
+
+    --radius: 0.75rem;
+    
+    /* Luxury gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--pearl-white)), hsl(var(--sand-beige)));
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--azure-blue)), hsl(var(--deep-navy)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--champagne-gold)), hsl(40 55% 45%));
+    
+    /* Elegant shadows */
+    --shadow-luxury: 0 20px 60px -10px hsl(var(--deep-navy) / 0.15);
+    --shadow-card: 0 10px 30px -5px hsl(var(--deep-navy) / 0.08);
+    --shadow-hover: 0 25px 70px -15px hsl(var(--champagne-gold) / 0.25);
+    
+    /* Smooth transitions */
+    --transition-luxury: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Typography hierarchy */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  /* Luxury button variants */
+  .btn-luxury {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-accent hover:text-accent-foreground;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .btn-luxury:hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Custom booking button */
+  .btn-booking {
+    background-color: hsl(var(--champagne-gold)) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 0.5rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .btn-booking:hover {
+    background-color: hsl(var(--champagne-gold) / 0.9) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  .btn-secondary-luxury {
+    @apply bg-secondary text-secondary-foreground px-8 py-4 rounded-lg font-medium border border-primary/20 transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Elegant containers */
+  .luxury-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .luxury-card {
+    @apply bg-card rounded-2xl border border-border/50 overflow-hidden transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .luxury-card:hover {
+    box-shadow: var(--shadow-luxury);
+  }
+  
+  /* Hero section styles */
+  .hero-gradient {
+    background: var(--gradient-luxury);
+  }
+  
+  .ocean-gradient {
+    background: var(--gradient-ocean);
+  }
+  
+  .gold-gradient {
+    background: var(--gradient-gold);
+  }
+  
+  /* Elegant animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up.animate {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .scale-hover {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+}
