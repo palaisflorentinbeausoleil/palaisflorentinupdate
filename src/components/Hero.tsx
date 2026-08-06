@@ -35,9 +35,9 @@ const Hero = () => {
               <h1 className="font-display text-4xl lg:text-6xl font-bold text-[#1E2A3A] mb-6 leading-tight">
                 Palais Florentin – Élégance et Vue Mer aux Portes de Monaco
               </h1>
-              <h2 className="text-xl lg:text-2xl font-medium text-[#C9A35A] mb-6">
+              <p className="text-xl lg:text-2xl font-medium text-[#8B6914] mb-6">
                 Un appartement de standing à 150 m des jardins du Casino de Monte-Carlo et 950 m des plages.
-              </h2>
+              </p>
               <p className="text-lg text-[#8B8B8B] mb-8 leading-relaxed">
                 Profitez d'un séjour inoubliable dans un élégant 2 pièces de 50 m², rénové et climatisé, avec terrasse plein sud et vue panoramique sur la Méditerranée.
               </p>

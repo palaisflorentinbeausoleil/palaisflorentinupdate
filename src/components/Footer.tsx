@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO, PROPERTY_INFO } from '@/lib/constants';
 
@@ -199,20 +199,6 @@ const Footer = () => {
                 title="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-primary-foreground/80 hover:text-accent transition-colors"
-                title="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-primary-foreground/80 hover:text-accent transition-colors"
-                title="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>

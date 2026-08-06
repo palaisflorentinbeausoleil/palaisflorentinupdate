@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import StructuredData from '@/components/StructuredData';
 import VacationRentalStructuredData from '@/components/VacationRentalStructuredData';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import StickyBookingButton from '@/components/StickyBookingButton';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -17,7 +16,7 @@ const Appartement = () => {
     title: "Appartement Palais Florentin - Vue Mer Panoramique | Location Beausoleil Monaco",
     description: "Découvrez notre appartement 2 pièces de luxe de 50m² avec terrasse 20m² plein sud, vue mer panoramique 180°, entièrement rénové avec matériaux haut de gamme. Location courte durée à 150m du Casino Monte-Carlo.",
     keywords: "appartement vue mer monaco, location beausoleil, terrasse 20m², vue panoramique, appartement luxe monaco, location courte durée beausoleil, casino monte carlo, riviera française",
-    canonical: "https://palais-florentin.com/appartement",
+    canonical: "https://palaisflorentin.com/appartement",
     ogImage: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
     type: "product" as const,
     tags: ["appartement", "vue mer", "terrasse", "luxe", "monaco", "beausoleil", "location courte durée"]
@@ -279,7 +278,6 @@ const Appartement = () => {
         </main>
         
         <Footer />
-        <FloatingWhatsApp />
         <StickyBookingButton />
       </div>
     </>

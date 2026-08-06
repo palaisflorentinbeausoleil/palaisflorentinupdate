@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { LOCATION_HIGHLIGHTS, CONTACT_INFO, PROPERTY_INFO } from '@/lib/constants';
 import StickyBookingButton from '@/components/StickyBookingButton';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Emplacement = () => {
   const getIcon = (title: string) => {
@@ -70,7 +69,7 @@ const Emplacement = () => {
       <SEOHead 
         title="Emplacement Palais Florentin - Vue mer et proximité Monaco | Beausoleil"
         description="Découvrez l'emplacement exceptionnel du Palais Florentin : 150m des jardins du Casino Monte-Carlo, 950m des plages, vue mer panoramique, transports, restaurants."
-        canonical="https://palais-florentin.com/emplacement"
+        canonical="https://palaisflorentin.com/emplacement"
       />
       <div className="min-h-screen bg-background">
       <Navigation />
@@ -265,7 +264,6 @@ const Emplacement = () => {
 
       <Footer />
       <StickyBookingButton />
-      <FloatingWhatsApp />
       </div>
     </>
   );

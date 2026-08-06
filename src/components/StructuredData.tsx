@@ -231,7 +231,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         latitude: 43.7392,
         longitude: 7.4272
       },
-      url: "https://palais-florentin.com",
+      url: "https://palaisflorentin.com",
       telephone: CONTACT_INFO.phone,
       email: CONTACT_INFO.email,
       priceRange: "€€€",
@@ -266,53 +266,18 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         }
       ],
       image: [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
+        "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palaisflorentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 127
-      },
       offers: {
         "@type": "Offer",
         availability: "https://schema.org/InStock",
         priceCurrency: "EUR",
         price: "250",
         validFrom: "2024-01-01",
-        validThrough: "2025-12-31"
-      },
-      review: [
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Marie Dubois"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Appartement exceptionnel avec une vue magnifique sur la mer. La terrasse est parfaite pour les petits déjeuners. Très bien situé près du Casino.",
-          datePublished: "2024-01-15"
-        },
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Jean-Pierre Martin"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Séjour parfait dans cet appartement de luxe. Tout est impeccable, la décoration est soignée et l'emplacement est idéal.",
-          datePublished: "2024-02-20"
-        }
-      ]
+        validThrough: "2027-12-31"
+      }
     };
 
     return (
@@ -450,10 +415,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         }
       ],
       image: [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
-        "https://palais-florentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp"
+        "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palaisflorentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
+        "https://palaisflorentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp"
       ],
       address: {
         "@type": "PostalAddress",
@@ -473,46 +438,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         priceCurrency: "EUR",
         price: "250",
         validFrom: "2024-01-01",
-        validThrough: "2025-12-31",
-        priceValidUntil: "2025-12-31"
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 127,
-        bestRating: 5,
-        worstRating: 1
-      },
-      review: [
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Sophie Laurent"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Vue imprenable sur la mer depuis la terrasse. L'appartement est parfaitement équipé et très bien décoré. Emplacement idéal pour visiter Monaco.",
-          datePublished: "2024-03-10"
-        },
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Pierre Durand"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Excellent séjour dans cet appartement de luxe. La terrasse est magnifique pour les repas en extérieur. Très calme malgré la proximité du Casino.",
-          datePublished: "2024-02-28"
-        }
-      ]
+        validThrough: "2027-12-31",
+        priceValidUntil: "2027-12-31"
+      }
     };
 
     return (
@@ -532,13 +460,13 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "@type": "ListItem",
           position: 1,
           name: "Accueil",
-          item: "https://palais-florentin.com"
+          item: "https://palaisflorentin.com"
         },
         {
           "@type": "ListItem",
           position: 2,
           name: String(data?.currentPage || "Page actuelle"),
-          item: `https://palais-florentin.com${String(data?.path || "")}`
+          item: `https://palaisflorentin.com${String(data?.path || "")}`
         }
       ]
     };
@@ -637,11 +565,11 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         }
       ],
       image: [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
-        "https://palais-florentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp",
-        "https://palais-florentin.com/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.webp"
+        "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palaisflorentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
+        "https://palaisflorentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp",
+        "https://palaisflorentin.com/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.webp"
       ],
       address: {
         "@type": "PostalAddress",
@@ -661,47 +589,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         priceCurrency: "EUR",
         price: "250",
         validFrom: "2024-01-01",
-        validThrough: "2025-12-31",
-        priceValidUntil: "2025-12-31",
+        validThrough: "2027-12-31",
+        priceValidUntil: "2027-12-31",
         businessFunction: "https://schema.org/LeaseOut"
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 127,
-        bestRating: 5,
-        worstRating: 1
-      },
-      review: [
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Sophie Laurent"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Vue imprenable sur la mer depuis la terrasse. L'appartement est parfaitement équipé et très bien décoré. Emplacement idéal pour visiter Monaco.",
-          datePublished: "2024-03-10"
-        },
-        {
-          "@type": "Review",
-          author: {
-            "@type": "Person",
-            name: "Pierre Durand"
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: 5,
-            bestRating: 5
-          },
-          reviewBody: "Excellent séjour dans cet appartement de luxe. La terrasse est magnifique pour les repas en extérieur. Très calme malgré la proximité du Casino.",
-          datePublished: "2024-02-28"
-        }
-      ],
       checkinTime: "16:00",
       checkoutTime: "11:00",
       petsAllowed: false,
@@ -725,7 +616,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
       minPrice: "150",
       maxPrice: "950",
       validFrom: "2024-01-01",
-      validThrough: "2025-12-31",
+      validThrough: "2027-12-31",
       valueAddedTaxIncluded: true,
       eligibleRegion: {
         "@type": "Country",

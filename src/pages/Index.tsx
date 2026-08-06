@@ -10,8 +10,6 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import StructuredData from '@/components/StructuredData';
 import VacationRentalStructuredData from '@/components/VacationRentalStructuredData';
-import ReviewsSchema from '@/components/ReviewsSchema';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import StickyBookingButton from '@/components/StickyBookingButton';
 
 const Index = () => {
@@ -19,7 +17,7 @@ const Index = () => {
     title: "Palais Florentin - Appartement de Prestige Vue Mer | Location Beausoleil Monaco",
     description: "Appartement 2 pièces de luxe avec vue mer panoramique, terrasse 20m², à 150m du Casino Monte-Carlo. Location courte durée haut de gamme à Beausoleil, Monaco. Réservez votre séjour de prestige.",
     keywords: "appartement monaco, location beausoleil, vue mer, casino monte carlo, terrasse, prestige, luxe, location courte durée, riviera française, côte d'azur, appartement vue mer monaco, location beausoleil monaco",
-    canonical: "https://palais-florentin.com/",
+    canonical: "https://palaisflorentin.com/",
     ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website" as const,
     tags: ["appartement", "monaco", "beausoleil", "vue mer", "luxe", "location courte durée", "riviera française"]
@@ -30,7 +28,7 @@ const Index = () => {
     "@type": "WebPage",
     "name": "Palais Florentin - Appartement de Prestige Vue Mer",
     "description": "Appartement 2 pièces de luxe avec vue mer panoramique, terrasse 20m², à 150m du Casino Monte-Carlo. Location courte durée haut de gamme à Beausoleil, Monaco.",
-    "url": "https://palais-florentin.com/",
+    "url": "https://palaisflorentin.com/",
     "mainEntity": {
       "@type": "Apartment",
       "name": "Appartement Palais Florentin - Vue Mer Panoramique",
@@ -50,9 +48,9 @@ const Index = () => {
         {"@type": "LocationFeatureSpecification", "name": "Cuisine entièrement équipée"}
       ],
       "image": [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
+        "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palaisflorentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -72,7 +70,7 @@ const Index = () => {
         "priceCurrency": "EUR",
         "price": "250",
         "validFrom": "2024-01-01",
-        "validThrough": "2025-12-31"
+        "validThrough": "2027-12-31"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -89,7 +87,7 @@ const Index = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Accueil",
-          "item": "https://palais-florentin.com"
+          "item": "https://palaisflorentin.com"
         }
       ]
     }
@@ -100,7 +98,6 @@ const Index = () => {
       <SEOHead {...seoData} structuredData={structuredData} />
       <StructuredData type="breadcrumb" data={{ currentPage: "Accueil", path: "/" }} />
       <VacationRentalStructuredData />
-      <ReviewsSchema />
       
       <main className="min-h-screen">
         <Navigation />
@@ -145,7 +142,6 @@ const Index = () => {
       </main>
       
       <Footer />
-      <FloatingWhatsApp />
       <StickyBookingButton />
     </>
   );

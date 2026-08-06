@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://palais-florentin.com/sitemap.xml
+Sitemap: https://palaisflorentin.com/sitemap.xml
 
 # Bloquer les bots SEO agressifs
 User-agent: AhrefsBot
