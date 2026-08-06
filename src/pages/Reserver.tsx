@@ -10,7 +10,7 @@ const Reserver = () => {
     description: "Réservez votre séjour dans notre appartement de luxe avec vue mer panoramique. Réservation sécurisée en ligne avec Lodgify, prix transparents. Location courte durée à 150m du Casino Monte-Carlo.",
     keywords: "réserver appartement monaco, location beausoleil, réservation en ligne, appartement vue mer, location courte durée monaco, réserver palais florentin",
     canonical: "https://palais-florentin.com/reserver",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website" as const,
     tags: ["réservation", "appartement", "monaco", "beausoleil", "location courte durée"]
   };

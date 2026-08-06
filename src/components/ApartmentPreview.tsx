@@ -74,24 +74,24 @@ const ApartmentPreview = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png"
+                src="/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp"
                 alt="Salon élégant du Palais Florentin avec mobilier haut de gamme"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
               <img 
-                src="/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png"
+                src="/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
                 alt="Chambre élégante avec vue sur terrasse et mer du Palais Florentin"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <div className="space-y-4">
               <img 
-                src="/lovable-uploads/d7c53285-e562-4703-bd4c-2dbe6f452939.png"
+                src="/lovable-uploads/d7c53285-e562-4703-bd4c-2dbe6f452939.webp"
                 alt="Cuisine moderne entièrement équipée du Palais Florentin"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
               <img 
-                src="/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.png"
+                src="/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.webp"
                 alt="Salle de bain moderne avec douche du Palais Florentin"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />

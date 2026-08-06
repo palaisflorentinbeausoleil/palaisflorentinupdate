@@ -132,7 +132,7 @@ const Emplacement = () => {
               </div>
               <div className="luxury-card overflow-hidden">
                 <img 
-                  src="/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"
+                  src="/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp"
                   alt="Terrasse avec vue mer panoramique du Palais Florentin depuis Beausoleil vers Monaco"
                   className="w-full h-full object-cover aspect-[4/3]"
                   width="800"

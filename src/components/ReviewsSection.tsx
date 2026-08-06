@@ -181,7 +181,7 @@ const ReviewsSection = () => {
             "@context": "https://schema.org",
             "@type": "LodgingBusiness",
             "name": "Palais Florentin",
-            "image": ["/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"],
+            "image": ["/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp"],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": CONTACT_INFO.address.street,

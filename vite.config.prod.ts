@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     // Optimisations pour la production
-    target: 'es2015',
+    target: 'es2020',
     minify: 'terser',
     terserOptions: {
       compress: {

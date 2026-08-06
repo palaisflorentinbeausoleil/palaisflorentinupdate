@@ -22,7 +22,7 @@ const CalendarSchema = () => {
       "Prix dynamiques selon la saison"
     ],
     "screenshot": [
-      "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"
+      "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp"
     ],
     "softwareVersion": "1.0",
     "author": {

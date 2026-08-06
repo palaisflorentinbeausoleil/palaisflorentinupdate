@@ -20,7 +20,7 @@ const Index = () => {
     description: "Appartement 2 pièces de luxe avec vue mer panoramique, terrasse 20m², à 150m du Casino Monte-Carlo. Location courte durée haut de gamme à Beausoleil, Monaco. Réservez votre séjour de prestige.",
     keywords: "appartement monaco, location beausoleil, vue mer, casino monte carlo, terrasse, prestige, luxe, location courte durée, riviera française, côte d'azur, appartement vue mer monaco, location beausoleil monaco",
     canonical: "https://palais-florentin.com/",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website" as const,
     tags: ["appartement", "monaco", "beausoleil", "vue mer", "luxe", "location courte durée", "riviera française"]
   };
@@ -50,9 +50,9 @@ const Index = () => {
         {"@type": "LocationFeatureSpecification", "name": "Cuisine entièrement équipée"}
       ],
       "image": [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png"
+        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
       ],
       "address": {
         "@type": "PostalAddress",

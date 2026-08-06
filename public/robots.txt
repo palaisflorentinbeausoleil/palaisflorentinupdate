@@ -1,70 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://palais-florentin.com/sitemap.xml
 
-# Crawl-delay pour éviter de surcharger le serveur
-Crawl-delay: 1
-
-# Permettre l'accès aux ressources importantes
-Allow: /lovable-uploads/
-Allow: /src/
-Allow: /public/
-
-# Bloquer l'accès aux fichiers sensibles
-Disallow: /supabase/
-Disallow: /node_modules/
-Disallow: /.env
-Disallow: /package.json
-Disallow: /package-lock.json
-Disallow: /bun.lockb
-Disallow: /tsconfig.json
-Disallow: /vite.config.ts
-Disallow: /tailwind.config.ts
-Disallow: /postcss.config.js
-Disallow: /eslint.config.js
-
-# Bloquer l'accès aux fichiers de développement
-Disallow: /.git/
-Disallow: /.github/
-Disallow: /dist/
-Disallow: /build/
-
-# Permettre l'accès aux images et médias
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.jpeg
-Allow: /*.gif
-Allow: /*.svg
-Allow: /*.ico
-Allow: /*.webp
-
-# Permettre l'accès aux fichiers CSS et JS
-Allow: /*.css
-Allow: /*.js
-
-# Instructions spécifiques pour Googlebot
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Instructions spécifiques pour Bingbot
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Instructions spécifiques pour les bots de réseaux sociaux
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Bloquer les bots malveillants connus
+# Bloquer les bots SEO agressifs
 User-agent: AhrefsBot
 Disallow: /
 

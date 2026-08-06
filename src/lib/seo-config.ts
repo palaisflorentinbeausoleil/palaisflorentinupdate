@@ -20,7 +20,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Appartement 2 pièces de luxe avec vue mer panoramique, terrasse 20m², à 150m du Casino Monte-Carlo. Location courte durée haut de gamme à Beausoleil, Monaco. Réservez votre séjour de prestige.",
     keywords: "appartement monaco, location beausoleil, vue mer, casino monte carlo, terrasse, prestige, luxe, location courte durée, riviera française, côte d'azur, appartement vue mer monaco, location beausoleil monaco",
     canonical: "https://palais-florentin.com/",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website",
     tags: ["appartement", "monaco", "beausoleil", "vue mer", "luxe", "location courte durée", "riviera française"]
   },
@@ -30,7 +30,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Découvrez notre appartement 2 pièces de luxe de 50m² avec terrasse 20m² plein sud, vue mer panoramique 180°, entièrement rénové avec matériaux haut de gamme. Location courte durée à 150m du Casino Monte-Carlo.",
     keywords: "appartement vue mer monaco, location beausoleil, terrasse 20m², vue panoramique, appartement luxe monaco, location courte durée beausoleil, casino monte carlo, riviera française",
     canonical: "https://palais-florentin.com/appartement",
-    ogImage: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
+    ogImage: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
     type: "product",
     tags: ["appartement", "vue mer", "terrasse", "luxe", "monaco", "beausoleil", "location courte durée"]
   },
@@ -40,7 +40,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Emplacement privilégié à 150m du Casino de Monte-Carlo, au cœur de la Riviera française. Découvrez les attractions, restaurants et activités à proximité de notre appartement de luxe.",
     keywords: "emplacement palais florentin, casino monte carlo, beausoleil monaco, riviera française, côte d'azur, location monaco, attractions monaco, restaurants monaco",
     canonical: "https://palais-florentin.com/emplacement",
-    ogImage: "/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.png",
+    ogImage: "/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp",
     type: "website",
     tags: ["emplacement", "monaco", "casino", "beausoleil", "riviera", "attractions"]
   },
@@ -50,7 +50,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Réservez votre séjour dans notre appartement de luxe avec vue mer panoramique. Calendrier en ligne, réservation sécurisée, prix transparents. Location courte durée à 150m du Casino Monte-Carlo.",
     keywords: "réserver appartement monaco, location beausoleil, réservation en ligne, appartement vue mer, location courte durée monaco, réserver palais florentin",
     canonical: "https://palais-florentin.com/reserver",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website",
     tags: ["réservation", "appartement", "monaco", "beausoleil", "location courte durée"]
   },
@@ -60,7 +60,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Découvrez tous nos services et équipements haut de gamme : climatisation, WiFi, parking sécurisé, terrasse privative, vue mer panoramique. Confort exceptionnel à Monaco.",
     keywords: "services palais florentin, équipements appartement monaco, climatisation wifi parking, terrasse privative, vue mer, confort luxe monaco",
     canonical: "https://palais-florentin.com/services",
-    ogImage: "/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png",
+    ogImage: "/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
     type: "website",
     tags: ["services", "équipements", "confort", "luxe", "monaco"]
   },
@@ -70,7 +70,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Contactez-nous pour réserver votre séjour au Palais Florentin. Appartement de luxe avec vue mer à 150m du Casino Monte-Carlo. Téléphone, email, WhatsApp disponibles.",
     keywords: "contact palais florentin, réserver appartement monaco, téléphone email whatsapp, location beausoleil, appartement vue mer",
     canonical: "https://palais-florentin.com/contact",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website",
     tags: ["contact", "réservation", "monaco", "appartement"]
   },
@@ -80,7 +80,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Mentions légales du Palais Florentin, location d'appartement de luxe à Beausoleil, Monaco. Informations légales et réglementaires.",
     keywords: "mentions légales palais florentin, location appartement monaco, informations légales, beausoleil",
     canonical: "https://palais-florentin.com/mentions-legales",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website",
     tags: ["mentions légales", "informations légales"],
     noindex: true
@@ -91,7 +91,7 @@ export const SEO_CONFIG: Record<string, SEOConfig> = {
     description: "Politique de confidentialité du Palais Florentin. Protection de vos données personnelles lors de la réservation de notre appartement de luxe à Monaco.",
     keywords: "politique confidentialité palais florentin, protection données personnelles, rgpd, location monaco",
     canonical: "https://palais-florentin.com/politique-confidentialite",
-    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+    ogImage: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
     type: "website",
     tags: ["politique confidentialité", "protection données", "rgpd"],
     noindex: true
@@ -125,9 +125,9 @@ export const STRUCTURED_DATA_CONFIG = {
         {"@type": "LocationFeatureSpecification", "name": "Cuisine entièrement équipée"}
       ],
       "image": [
-        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
-        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
-        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png"
+        "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+        "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+        "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
       ],
       "address": {
         "@type": "PostalAddress",
@@ -179,9 +179,9 @@ export const STRUCTURED_DATA_CONFIG = {
       {"@type": "LocationFeatureSpecification", "name": "Cuisine entièrement équipée"}
     ],
     "image": [
-      "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
-      "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
-      "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png"
+      "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+      "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+      "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp"
     ],
     "address": {
       "@type": "PostalAddress",

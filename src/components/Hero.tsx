@@ -83,7 +83,7 @@ const Hero = () => {
           <div className="hidden lg:block">
             <div className="relative">
               <img 
-                src="/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"
+                src="/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp"
                 alt="Terrasse avec vue mer panoramique du Palais Florentin à Monaco"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
