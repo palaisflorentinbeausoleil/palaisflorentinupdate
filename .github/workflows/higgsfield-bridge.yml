@@ -1,15 +1,12 @@
 # Pont de transfert temporaire : le runner GitHub (accès internet libre)
-# pousse les photos sources vers Higgsfield et rapatrie les résultats.
+# rapatrie les résultats Higgsfield dans une branche de transport.
+# Se déclenche sur les pushs de la PR et ne fait rien si bridge-payload.json est absent.
 # À supprimer une fois le retraitement des photos terminé.
 name: higgsfield-bridge
 
 on:
-  workflow_dispatch:
-    inputs:
-      payload:
-        description: 'JSON {mode: upload|download, items: [{name, url}]}'
-        required: true
-        type: string
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
@@ -20,22 +17,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Bridge
-        env:
-          PAYLOAD: ${{ inputs.payload }}
         run: |
           set -e
-          MODE=$(echo "$PAYLOAD" | jq -r .mode)
-          if [ "$MODE" = "upload" ]; then
-            echo "$PAYLOAD" | jq -c '.items[]' | while read -r item; do
-              NAME=$(echo "$item" | jq -r .name)
-              URL=$(echo "$item" | jq -r .url)
-              CODE=$(curl -s -o /dev/null -w "%{http_code}" -X PUT -H "Content-Type: image/png" --data-binary @"public/lovable-uploads/$NAME" "$URL")
-              echo "$NAME -> HTTP $CODE"
-              [ "$CODE" = "200" ] || exit 1
-            done
-          elif [ "$MODE" = "download" ]; then
+          if [ ! -f bridge-payload.json ]; then
+            echo "Pas de bridge-payload.json — rien à faire."
+            exit 0
+          fi
+          MODE=$(jq -r .mode bridge-payload.json)
+          if [ "$MODE" = "download" ]; then
             mkdir -p hf-results
-            echo "$PAYLOAD" | jq -c '.items[]' | while read -r item; do
+            jq -c '.items[]' bridge-payload.json | while read -r item; do
               NAME=$(echo "$item" | jq -r .name)
               URL=$(echo "$item" | jq -r .url)
               curl -fsSL --retry 3 -o "hf-results/$NAME" "$URL"
@@ -48,5 +39,5 @@ jobs:
             git commit -m "Transport temporaire : résultats Higgsfield"
             git push -f origin claude/hf-results-temp
           else
-            echo "mode inconnu: $MODE" && exit 1
+            echo "mode inconnu ou non supporté: $MODE" && exit 1
           fi
