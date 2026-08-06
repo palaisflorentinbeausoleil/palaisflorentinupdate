@@ -1,0 +1,52 @@
+# Pont de transfert temporaire : le runner GitHub (accès internet libre)
+# pousse les photos sources vers Higgsfield et rapatrie les résultats.
+# À supprimer une fois le retraitement des photos terminé.
+name: higgsfield-bridge
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'JSON {mode: upload|download, items: [{name, url}]}'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bridge
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: |
+          set -e
+          MODE=$(echo "$PAYLOAD" | jq -r .mode)
+          if [ "$MODE" = "upload" ]; then
+            echo "$PAYLOAD" | jq -c '.items[]' | while read -r item; do
+              NAME=$(echo "$item" | jq -r .name)
+              URL=$(echo "$item" | jq -r .url)
+              CODE=$(curl -s -o /dev/null -w "%{http_code}" -X PUT -H "Content-Type: image/png" --data-binary @"public/lovable-uploads/$NAME" "$URL")
+              echo "$NAME -> HTTP $CODE"
+              [ "$CODE" = "200" ] || exit 1
+            done
+          elif [ "$MODE" = "download" ]; then
+            mkdir -p hf-results
+            echo "$PAYLOAD" | jq -c '.items[]' | while read -r item; do
+              NAME=$(echo "$item" | jq -r .name)
+              URL=$(echo "$item" | jq -r .url)
+              curl -fsSL --retry 3 -o "hf-results/$NAME" "$URL"
+              echo "$NAME téléchargé ($(stat -c%s "hf-results/$NAME") octets)"
+            done
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git checkout -B claude/hf-results-temp
+            git add -f hf-results
+            git commit -m "Transport temporaire : résultats Higgsfield"
+            git push -f origin claude/hf-results-temp
+          else
+            echo "mode inconnu: $MODE" && exit 1
+          fi
