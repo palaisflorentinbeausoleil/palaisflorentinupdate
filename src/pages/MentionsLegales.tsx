@@ -9,7 +9,7 @@ const MentionsLegales = () => {
       <SEOHead 
         title="Mentions Légales - Palais Florentin | Location Beausoleil Monaco"
         description="Mentions légales du Palais Florentin, location saisonnière de luxe à Beausoleil, frontière Monaco. Informations légales et de contact."
-        canonical="https://palais-florentin.com/mentions-legales"
+        canonical="https://palaisflorentin.com/mentions-legales"
       />
       <div className="min-h-screen bg-background">
       <Navigation />

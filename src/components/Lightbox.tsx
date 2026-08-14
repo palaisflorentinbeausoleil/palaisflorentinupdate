@@ -37,11 +37,21 @@ const Lightbox = ({ images, initialIndex, isOpen, onClose }: LightboxProps) => {
     };
   }, [isOpen, initialIndex]);
 
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+    resetZoom();
+  }, [images.length]);
+
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    resetZoom();
+  }, [images.length]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
-      
+
       switch (e.key) {
         case 'Escape':
           onClose();
@@ -58,16 +68,6 @@ const Lightbox = ({ images, initialIndex, isOpen, onClose }: LightboxProps) => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, currentIndex, goToNext, goToPrevious, onClose]);
-
-  const goToNext = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-    resetZoom();
-  }, [images.length]);
-
-  const goToPrevious = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-    resetZoom();
-  }, [images.length]);
 
   const handleZoomIn = () => {
     setScale(prev => Math.min(prev * 1.2, 3));

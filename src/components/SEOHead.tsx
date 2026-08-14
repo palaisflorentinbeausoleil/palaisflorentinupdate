@@ -34,7 +34,7 @@ const SEOHead = ({
   nofollow = false
 }: SEOHeadProps) => {
   useEffect(() => {
-    const baseUrl = 'https://palais-florentin.com';
+    const baseUrl = 'https://palaisflorentin.com';
     
     // Update title
     document.title = title;

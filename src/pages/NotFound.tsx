@@ -21,7 +21,7 @@ const NotFound = () => {
       <SEOHead 
         title="Page non trouvée - Palais Florentin"
         description="Cette page n'existe pas. Retournez à l'accueil pour découvrir notre appartement de prestige à Beausoleil."
-        canonical={`https://palais-florentin.com${location.pathname}`}
+        canonical={`https://palaisflorentin.com${location.pathname}`}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

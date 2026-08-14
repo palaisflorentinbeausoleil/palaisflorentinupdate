@@ -108,7 +108,7 @@ const Services = () => {
       <SEOHead 
         title="Services et FAQ Palais Florentin - Conciergerie et Équipements | Monaco"
         description="Découvrez nos services haut de gamme : conciergerie 24h/24, WiFi fibre, climatisation, cuisine équipée, parking inclus. FAQ complète."
-        canonical="https://palais-florentin.com/services"
+        canonical="https://palaisflorentin.com/services"
       />
       <StructuredData type="faq" />
       <div className="min-h-screen bg-background">

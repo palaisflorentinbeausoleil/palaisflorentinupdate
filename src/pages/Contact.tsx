@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CONTACT_INFO, PROPERTY_INFO } from '@/lib/constants';
 import StickyBookingButton from '@/components/StickyBookingButton';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Contact = () => {
   return (
@@ -14,7 +13,7 @@ const Contact = () => {
       <SEOHead 
         title="Contact Palais Florentin - Réservation et Informations | Monaco Beausoleil"
         description="Contactez-nous pour réserver votre séjour au Palais Florentin. WhatsApp 24h/24, téléphone, email. Accès et plan depuis l'aéroport de Nice."
-        canonical="https://palais-florentin.com/contact"
+        canonical="https://palaisflorentin.com/contact"
       />
       <div className="min-h-screen bg-background">
       <Navigation />
@@ -111,7 +110,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Arrivée</span>
-                        <span className="font-medium">À partir de 15h00</span>
+                        <span className="font-medium">À partir de 16h00</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">Départ</span>
@@ -241,7 +240,6 @@ const Contact = () => {
 
       <Footer />
       <StickyBookingButton />
-      <FloatingWhatsApp />
       </div>
     </>
   );

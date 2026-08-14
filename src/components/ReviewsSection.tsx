@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { CONTACT_INFO } from '@/lib/constants';
 
 const ReviewsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -172,40 +171,6 @@ const ReviewsSection = () => {
           </div>
         </div>
       </section>
-
-      {/* JSON-LD Structured Data */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LodgingBusiness",
-            "name": "Palais Florentin",
-            "image": ["/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"],
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": CONTACT_INFO.address.street,
-              "addressLocality": "06240 Beausoleil",
-              "postalCode": "06240",
-              "addressCountry": "France"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "5"
-            },
-            "review": reviews.map(review => ({
-              "@type": "Review",
-              "author": review.author.split(',')[0],
-              "reviewBody": review.content,
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-              }
-            }))
-          })
-        }}
-      />
     </>
   );
 };

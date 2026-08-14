@@ -60,7 +60,7 @@ const Breadcrumbs = ({ items, className, showHome = true }: BreadcrumbsProps) =>
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": item.href ? `https://palais-florentin.com${item.href}` : undefined
+      "item": item.href ? `https://palaisflorentin.com${item.href}` : undefined
     }))
   };
 

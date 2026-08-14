@@ -4,7 +4,7 @@ const CalendarSchema = () => {
     "@type": "WebApplication",
     "name": "Calendrier de Disponibilités Palais Florentin",
     "description": "Application web pour consulter les disponibilités et tarifs de l'appartement Palais Florentin",
-    "url": "https://palais-florentin.com/calendrier",
+    "url": "https://palaisflorentin.com/calendrier",
     "applicationCategory": "TravelApplication",
     "operatingSystem": "Web Browser",
     "offers": {
@@ -22,19 +22,19 @@ const CalendarSchema = () => {
       "Prix dynamiques selon la saison"
     ],
     "screenshot": [
-      "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png"
+      "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp"
     ],
     "softwareVersion": "1.0",
     "author": {
       "@type": "Organization",
       "name": "Palais Florentin",
-      "url": "https://palais-florentin.com"
+      "url": "https://palaisflorentin.com"
     },
     "mainEntity": {
       "@type": "Apartment",
       "name": "Appartement Palais Florentin",
       "description": "Appartement de luxe avec vue mer panoramique",
-      "url": "https://palais-florentin.com/appartement"
+      "url": "https://palaisflorentin.com/appartement"
     }
   };
 

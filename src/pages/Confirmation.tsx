@@ -7,7 +7,7 @@ const Confirmation = () => {
   const seoData = {
     title: "Réservation Confirmée | Palais Florentin",
     description: "Votre réservation a été confirmée avec succès. Détails de votre séjour et informations pratiques pour votre arrivée au Palais Florentin.",
-    canonical: "https://palais-florentin.com/confirmation"
+    canonical: "https://palaisflorentin.com/confirmation"
   };
 
   return (

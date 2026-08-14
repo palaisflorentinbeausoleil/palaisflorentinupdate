@@ -6,7 +6,7 @@ export const VACATION_RENTAL_SCHEMA = {
   name: "Appartement Palais Florentin - Vue Mer Panoramique",
   alternateName: "Palais Florentin",
   description: "Appartement 2 pièces de luxe de 50m² avec terrasse 20m² plein sud, vue mer panoramique 180°, entièrement rénové avec matériaux haut de gamme. Location courte durée haut de gamme à 150m du Casino de Monte-Carlo.",
-  url: "https://palais-florentin.com",
+  url: "https://palaisflorentin.com",
   telephone: CONTACT_INFO.phone,
   email: CONTACT_INFO.email,
   floorSize: {
@@ -88,11 +88,11 @@ export const VACATION_RENTAL_SCHEMA = {
     }
   ],
   image: [
-    "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
-    "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
-    "https://palais-florentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png",
-    "https://palais-florentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.png",
-    "https://palais-florentin.com/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.png"
+    "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+    "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
+    "https://palaisflorentin.com/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
+    "https://palaisflorentin.com/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp",
+    "https://palaisflorentin.com/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.webp"
   ],
   address: {
     "@type": "PostalAddress",
@@ -112,8 +112,8 @@ export const VACATION_RENTAL_SCHEMA = {
     priceCurrency: "EUR",
     price: "250",
     validFrom: "2024-01-01",
-    validThrough: "2025-12-31",
-    priceValidUntil: "2025-12-31",
+    validThrough: "2027-12-31",
+    priceValidUntil: "2027-12-31",
     businessFunction: "https://schema.org/LeaseOut",
     // Nouvelles propriétés d'offre
     priceSpecification: {
@@ -123,46 +123,9 @@ export const VACATION_RENTAL_SCHEMA = {
       minPrice: "150",
       maxPrice: "950",
       validFrom: "2024-01-01",
-      validThrough: "2025-12-31"
+      validThrough: "2027-12-31"
     }
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 4.9,
-    reviewCount: 127,
-    bestRating: 5,
-    worstRating: 1
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Sophie Laurent"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: 5,
-        bestRating: 5
-      },
-      reviewBody: "Vue imprenable sur la mer depuis la terrasse. L'appartement est parfaitement équipé et très bien décoré. Emplacement idéal pour visiter Monaco.",
-      datePublished: "2024-03-10"
-    },
-    {
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: "Pierre Durand"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: 5,
-        bestRating: 5
-      },
-      reviewBody: "Excellent séjour dans cet appartement de luxe. La terrasse est magnifique pour les repas en extérieur. Très calme malgré la proximité du Casino.",
-      datePublished: "2024-02-28"
-    }
-  ],
   // Nouvelles propriétés de localisation
   areaServed: {
     "@type": "Country",
@@ -199,7 +162,7 @@ export const VACATION_RENTAL_SCHEMA = {
   // Propriétés pour les moteurs de recherche
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://palais-florentin.com/appartement"
+    "@id": "https://palaisflorentin.com/appartement"
   }
 };
 
@@ -212,7 +175,7 @@ export const VACATION_RENTAL_ADDITIONAL_SCHEMAS = [
     minPrice: "150",
     maxPrice: "950",
     validFrom: "2024-01-01",
-    validThrough: "2025-12-31",
+    validThrough: "2027-12-31",
     valueAddedTaxIncluded: true,
     eligibleRegion: {
       "@type": "Country",
