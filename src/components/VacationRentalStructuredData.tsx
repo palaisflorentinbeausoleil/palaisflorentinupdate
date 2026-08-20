@@ -28,8 +28,8 @@ const VacationRentalStructuredData = () => {
             name: "Palais Florentin",
             alternateName: "Palais Joséphine",
             description: "Résidence de standing proposant des appartements de luxe en location courte durée avec vue mer panoramique",
-            url: "https://palais-florentin.com",
-            logo: "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+            url: "https://palaisflorentin.com",
+            logo: "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
             address: {
               "@type": "PostalAddress",
               streetAddress: "2 Avenue Charles de Gaulle",
@@ -78,8 +78,8 @@ const VacationRentalStructuredData = () => {
               longitude: 7.4272
             },
             image: [
-              "https://palais-florentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
-              "https://palais-florentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png"
+              "https://palaisflorentin.com/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
+              "https://palaisflorentin.com/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp"
             ],
             publicAccess: true,
             amenityFeature: [

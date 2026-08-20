@@ -1,33 +1,43 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { MessageCircle, Phone, ExternalLink } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
+
+const LODGIFY_SCRIPT_SRC = 'https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js';
+const CHECKOUT_URL = 'https://checkout.lodgify.com/palaisflorentin/fr/#/709747';
 
 const LodgifyWidget = () => {
-  useEffect(() => {
-    // Charger le script Lodgify
-    const script = document.createElement('script');
-    script.src = 'https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js';
-    script.async = true;
-    script.defer = true;
-    
-    script.onload = () => {
-      console.log('Lodgify script chargé avec succès');
-      // Initialiser le widget après le chargement du script
-      if (window.renderPortableSearchBar) {
-        window.renderPortableSearchBar();
-      }
-    };
-    
-    script.onerror = () => {
-      console.error('Erreur lors du chargement du script Lodgify');
-    };
-    
-    document.head.appendChild(script);
+  const [widgetFailed, setWidgetFailed] = useState(false);
 
-    // Nettoyage lors du démontage du composant
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
+  useEffect(() => {
+    // Le script est déjà déclaré dans index.html : on ne l'injecte une seconde
+    // fois que s'il est absent, et on ne le retire jamais du DOM (d'autres
+    // pages l'utilisent aussi).
+    const render = () => window.renderPortableSearchBar?.();
+
+    if (window.renderPortableSearchBar) {
+      render();
+    } else {
+      let script = document.querySelector<HTMLScriptElement>(`script[src="${LODGIFY_SCRIPT_SRC}"]`);
+      if (!script) {
+        script = document.createElement('script');
+        script.src = LODGIFY_SCRIPT_SRC;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
       }
-    };
+      script.addEventListener('load', render);
+    }
+
+    // Si le widget n'a rien rendu après 8s (script bloqué, réseau…),
+    // on affiche des alternatives de réservation.
+    const timeout = window.setTimeout(() => {
+      const container = document.getElementById('lodgify-search-bar');
+      if (!container || container.childElementCount === 0) {
+        setWidgetFailed(true);
+      }
+    }, 8000);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   return (
@@ -43,28 +53,28 @@ const LodgifyWidget = () => {
             --ldg-psb-padding: 16px;
             --ldg-psb-input-background: hsl(0 0% 100%); /* Blanc pur pour les inputs */
             --ldg-psb-button-border-radius: 0.75rem; /* Même radius que le design */
-            
+
             /* Couleurs primaires du design Palais Florentin */
             --ldg-psb-color-primary: hsl(210 35% 17%); /* Deep navy - boutons */
             --ldg-psb-color-primary-lighter: hsl(210 35% 25%); /* Navy plus clair */
             --ldg-psb-color-primary-darker: hsl(210 35% 12%); /* Navy plus foncé */
             --ldg-psb-color-primary-contrast: hsl(40 25% 96%); /* Pearl white - texte */
-            
+
             /* Couleurs sémantiques cohérentes */
             --ldg-semantic-color-primary: hsl(210 35% 17%); /* Deep navy */
             --ldg-semantic-color-primary-lighter: hsl(210 35% 25%);
             --ldg-semantic-color-primary-darker: hsl(210 35% 12%);
             --ldg-semantic-color-primary-contrast: hsl(40 25% 96%);
-            
+
             /* Accents du design */
             --ldg-psb-accent: hsl(40 45% 57%); /* Champagne gold */
             --ldg-psb-accent-lighter: hsl(40 45% 65%);
             --ldg-psb-accent-darker: hsl(40 45% 45%);
-            
+
             /* Z-index élevé pour les modales */
             --ldg-component-modal-z-index: 999;
           }
-          
+
           /* Intégration parfaite avec le design */
           #lodgify-search-bar {
             width: 100%;
@@ -74,7 +84,7 @@ const LodgifyWidget = () => {
             padding: 0;
             box-shadow: none; /* Pas d'ombre */
           }
-          
+
           /* Personnalisation des inputs */
           #lodgify-search-bar input,
           #lodgify-search-bar select {
@@ -84,7 +94,7 @@ const LodgifyWidget = () => {
             color: hsl(210 35% 17%);
             font-family: 'Montserrat', sans-serif;
           }
-          
+
           /* Personnalisation des boutons */
           #lodgify-search-bar button {
             background: hsl(210 35% 17%) !important; /* Deep navy */
@@ -94,13 +104,13 @@ const LodgifyWidget = () => {
             font-weight: 500;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           }
-          
+
           #lodgify-search-bar button:hover {
             background: hsl(210 35% 12%) !important; /* Navy plus foncé */
             transform: translateY(-1px);
             box-shadow: 0 25px 70px -15px hsl(210 35% 17% / 0.25);
           }
-          
+
           /* Labels et textes */
           #lodgify-search-bar label {
             color: hsl(210 35% 17%);
@@ -109,14 +119,14 @@ const LodgifyWidget = () => {
           }
         `}
       </style>
-      
+
       {/* Widget Lodgify */}
       <div
         id="lodgify-search-bar"
         data-website-id="607857"
         data-language-code="fr"
-        data-checkout-page-url='https://checkout.lodgify.com/palaisflorentin/fr/#/709747'
-        
+        data-checkout-page-url={CHECKOUT_URL}
+
         data-dates-check-in-label='Arrivée'
         data-dates-check-out-label='Départ'
         data-guests-counter-label='Invités'
@@ -137,28 +147,49 @@ const LodgifyWidget = () => {
         data-pets-label='{"one":"animal de compagnie","other":"animaux de compagnie"}'
         data-pets-not-allowed-label='Non autorisé'
         data-done-label='Terminé'
-        
+
         data-new-tab="false"
         data-version="stable"
         data-has-guests-breakdown
-        data-return-url="https://palais-florentin.com"
+        data-return-url="https://palaisflorentin.com"
         data-return-label="Retour au site Palais Florentin"
       ></div>
-      
-      {/* Bouton de retour personnalisé */}
-      <div className="text-center mt-6">
-        <a 
-          href="https://palais-florentin.com" 
-          className="inline-flex items-center px-6 py-3 bg-[hsl(210_35%_17%)] text-[hsl(40_25%_96%)] rounded-lg hover:bg-[hsl(210_35%_12%)] transition-all duration-300 font-medium"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Retour au site Palais Florentin
-        </a>
-      </div>
+
+      {/* Alternatives si le widget ne charge pas */}
+      {widgetFailed && (
+        <div className="mt-6 rounded-xl border border-[hsl(32_25%_88%)] bg-white p-6 text-center">
+          <p className="text-[hsl(210_35%_17%)] font-medium mb-4">
+            Le module de réservation ne s'affiche pas ? Réservez directement :
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[hsl(210_35%_17%)] text-[hsl(40_25%_96%)] rounded-lg hover:bg-[hsl(210_35%_12%)] transition-colors font-medium"
+            >
+              <ExternalLink className="w-5 h-5 mr-2" />
+              Vérifier les disponibilités
+            </a>
+            <a
+              href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=Bonjour%20!%20Je%20souhaite%20r%C3%A9server%20le%20Palais%20Florentin`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp
+            </a>
+            <a
+              href={`tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`}
+              className="inline-flex items-center justify-center px-6 py-3 border border-[hsl(210_35%_17%)] text-[hsl(210_35%_17%)] rounded-lg hover:bg-[hsl(210_35%_17%)] hover:text-white transition-colors font-medium"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              {CONTACT_INFO.phone}
+            </a>
+          </div>
+        </div>
+      )}
     </>
   );
 };

@@ -68,7 +68,7 @@ const OptimizedImage = ({
     width: width,
     height: height,
     sizes: sizes,
-    loading: priority ? 'eager' : 'lazy',
+    loading: (priority ? 'eager' : 'lazy') as 'eager' | 'lazy',
     decoding: 'async' as const,
     onLoad: handleLoad,
     onError: handleError,

@@ -8,7 +8,7 @@ const PolitiqueConfidentialite = () => {
       <SEOHead 
         title="Politique de Confidentialité - Palais Florentin | Protection des Données"
         description="Politique de confidentialité du Palais Florentin. Protection des données personnelles selon le RGPD. Sécurité et confidentialité garanties."
-        canonical="https://palais-florentin.com/politique-confidentialite"
+        canonical="https://palaisflorentin.com/politique-confidentialite"
       />
       <div className="min-h-screen bg-background">
       <Navigation />

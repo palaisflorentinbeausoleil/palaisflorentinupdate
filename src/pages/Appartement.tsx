@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 import StructuredData from '@/components/StructuredData';
 import VacationRentalStructuredData from '@/components/VacationRentalStructuredData';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import StickyBookingButton from '@/components/StickyBookingButton';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -17,8 +16,8 @@ const Appartement = () => {
     title: "Appartement Palais Florentin - Vue Mer Panoramique | Location Beausoleil Monaco",
     description: "Découvrez notre appartement 2 pièces de luxe de 50m² avec terrasse 20m² plein sud, vue mer panoramique 180°, entièrement rénové avec matériaux haut de gamme. Location courte durée à 150m du Casino Monte-Carlo.",
     keywords: "appartement vue mer monaco, location beausoleil, terrasse 20m², vue panoramique, appartement luxe monaco, location courte durée beausoleil, casino monte carlo, riviera française",
-    canonical: "https://palais-florentin.com/appartement",
-    ogImage: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
+    canonical: "https://palaisflorentin.com/appartement",
+    ogImage: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
     type: "product" as const,
     tags: ["appartement", "vue mer", "terrasse", "luxe", "monaco", "beausoleil", "location courte durée"]
   };
@@ -63,32 +62,32 @@ const Appartement = () => {
 
   const galleryImages = [
     {
-      src: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.png",
+      src: "/lovable-uploads/a42bc02c-3520-49f6-8f01-836b428a034e.webp",
       alt: "Salon avec vue mer panoramique",
       caption: "Salon avec vue mer panoramique"
     },
     {
-      src: "/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.png",
+      src: "/lovable-uploads/704de42e-69b7-4d7c-8f3e-454f8de0eaf6.webp",
       alt: "Chambre principale",
       caption: "Chambre principale"
     },
     {
-      src: "/lovable-uploads/d7c53285-e562-4703-bd4c-2dbe6f452939.png",
+      src: "/lovable-uploads/d7c53285-e562-4703-bd4c-2dbe6f452939.webp",
       alt: "Coin cuisine salle à manger",
       caption: "Coin cuisine salle à manger"
     },
     {
-      src: "/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.png",
+      src: "/lovable-uploads/ae2e7277-2e48-45ab-b91f-2bec37932574.webp",
       alt: "Salle de bain",
       caption: "Salle de bain"
     },
     {
-      src: "/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.png",
+      src: "/lovable-uploads/f193ee2f-20e6-458e-ae60-5426571ab4e3.webp",
       alt: "Salon avec vue mer",
       caption: "Salon avec vue mer"
     },
     {
-      src: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.png",
+      src: "/lovable-uploads/d3c45090-3ecb-4dea-8543-597fcf390c2e.webp",
       alt: "Terrasse plein sud avec vue mer",
       caption: "Terrasse plein sud avec vue mer"
     }
@@ -279,7 +278,6 @@ const Appartement = () => {
         </main>
         
         <Footer />
-        <FloatingWhatsApp />
         <StickyBookingButton />
       </div>
     </>

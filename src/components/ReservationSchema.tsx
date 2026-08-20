@@ -7,7 +7,7 @@ const ReservationSchema = () => {
     "provider": {
       "@type": "Organization",
       "name": "Palais Florentin",
-      "url": "https://palais-florentin.com"
+      "url": "https://palaisflorentin.com"
     },
     "serviceType": "Location d'appartement de vacances",
     "areaServed": {
@@ -16,7 +16,7 @@ const ReservationSchema = () => {
     },
     "availableChannel": {
       "@type": "ServiceChannel",
-      "serviceUrl": "https://palais-florentin.com/reserver",
+      "serviceUrl": "https://palaisflorentin.com/reserver",
       "serviceType": "Réservation en ligne"
     },
     "hasOfferCatalog": {
@@ -34,14 +34,14 @@ const ReservationSchema = () => {
             "priceCurrency": "EUR",
             "price": "250",
             "validFrom": "2024-01-01",
-            "validThrough": "2025-12-31",
+            "validThrough": "2027-12-31",
             "valueAddedTaxIncluded": true
           },
           "availability": "https://schema.org/InStock"
         }
       ]
     },
-    "termsOfService": "https://palais-florentin.com/mentions-legales",
+    "termsOfService": "https://palaisflorentin.com/mentions-legales",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+33 6 12 16 93 20",

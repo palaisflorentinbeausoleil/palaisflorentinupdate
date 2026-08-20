@@ -33,9 +33,9 @@ const Navigation = () => {
               <MapPin className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="font-display text-xl font-semibold text-[#1E2A3A]">
+              <span className="block font-display text-xl font-semibold text-[#1E2A3A]">
                 Palais Florentin
-              </h1>
+              </span>
               <p className="text-sm text-[#8B8B8B]">Beausoleil • Monaco</p>
             </div>
           </Link>
@@ -64,7 +64,7 @@ const Navigation = () => {
               className="flex items-center space-x-2 text-muted-foreground hover:text-accent transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">{CONTACT_INFO.phone}</span>
+              <span className="text-sm font-medium whitespace-nowrap">{CONTACT_INFO.phone}</span>
             </a>
             <Link to="/reserver">
               <Button className="btn-luxury">
@@ -73,10 +73,16 @@ const Navigation = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile menu button + CTA Réserver */}
+          <div className="lg:hidden flex items-center gap-2">
+            <Link to="/reserver">
+              <Button size="sm" className="btn-luxury">
+                Réserver
+              </Button>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
               className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

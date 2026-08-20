@@ -10,7 +10,7 @@ const Calendrier = () => {
     title: "Calendrier de Disponibilités | Palais Florentin - Location Beausoleil Monaco",
     description: "Consultez notre calendrier de disponibilités en temps réel. Vérifiez les dates disponibles, les prix par nuit et réservez directement en ligne votre séjour au Palais Florentin.",
     keywords: "calendrier disponibilités, palais florentin, location beausoleil, prix par nuit, réservation en ligne, monaco",
-    canonical: "https://palais-florentin.com/calendrier"
+    canonical: "https://palaisflorentin.com/calendrier"
   };
 
   return (
